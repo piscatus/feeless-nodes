@@ -1,0 +1,21 @@
+services:
+  feeless-node:
+    container_name: ${CONTAINER_NAME}
+    cpus: "2.0"
+    image: ${NODE_IMAGE}
+    mem_limit: 4g
+    networks:
+      - node-net
+    pids_limit: 1000
+    ports:
+      - "${BOOTSTRAP_PORT}:${BOOTSTRAP_PORT}"
+      - "${RPC_PORT}:${RPC_PORT}"
+      - "${IPC_PORT}:${IPC_PORT}"
+      - "${WEBSOCKET_PORT}:${WEBSOCKET_PORT}"
+    restart: always
+    volumes:
+      - ./data:/root
+
+networks:
+  node-net:
+    external: true

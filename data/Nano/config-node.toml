@@ -1,0 +1,7 @@
+[rpc]
+
+enable = true
+
+[node]
+
+enable_voting = true

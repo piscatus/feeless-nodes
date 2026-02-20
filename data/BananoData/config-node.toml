@@ -1,0 +1,9 @@
+[rpc]
+
+enable = true
+
+[node]
+
+enable_voting = true
+
+online_weight_minimum = "90000000000000000000000000000000000000"
