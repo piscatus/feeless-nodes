@@ -3,6 +3,11 @@ services:
     container_name: ${CONTAINER_NAME}
     cpus: "2.0"
     image: ${NODE_IMAGE}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"
     mem_limit: 4g
     networks:
       - node-net
