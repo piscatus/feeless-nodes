@@ -8,7 +8,7 @@ services:
       options:
         max-size: "50m"
         max-file: "3"
-    mem_limit: 4g
+    mem_limit: 8g
     networks:
       - node-net
     pids_limit: 1000
